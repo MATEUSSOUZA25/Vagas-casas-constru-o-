@@ -1,0 +1,36 @@
+/* Estilos complementares do formulário Casas Engenharia.
+   O layout utilitário principal continua usando Tailwind CSS via CDN. */
+:root {
+  color-scheme: light;
+  --casas-blue: #00529B;
+  --casas-dark: #00386B;
+  --casas-yellow: #FDB913;
+}
+html { scroll-behavior: smooth; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+input, select, textarea, button { font: inherit; }
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--casas-blue);
+  box-shadow: 0 0 0 3px rgba(0, 82, 155, .14);
+}
+input[type="file"] { cursor: pointer; }
+.experience-card, .dependent-card { min-width: 0; }
+.error-msg { line-height: 1.4; }
+.ui-icon, span[class*="fa-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1em;
+  font-family: system-ui, sans-serif;
+  font-size: .78em;
+  line-height: 1;
+}
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(0, 82, 155, .35);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
