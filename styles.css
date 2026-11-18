@@ -1,0 +1,47 @@
+/* Estilos complementares do formulário Casas.
+   O layout utilitário principal continua usando Tailwind CSS via CDN. */
+:root {
+  color-scheme: light;
+  --casas-blue: #00529B;
+  --casas-dark: #00386B;
+  --casas-yellow: #FDB913;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; }
+input, select, textarea, button { font: inherit; }
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--casas-blue);
+  box-shadow: 0 0 0 3px rgba(0, 82, 155, .14);
+}
+input[type="file"] { cursor: pointer; }
+.experience-card, .dependent-card { min-width: 0; }
+.error-msg { line-height: 1.4; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+
+/* Identificação clara dos ambientes demo e produção. */
+.environment-banner {
+  display: flex; align-items: center; justify-content: center; gap: .65rem;
+  padding: .7rem 1rem; background: #fff7df; color: #754b00;
+  border-bottom: 1px solid #f2d58a; text-align: center;
+  font-size: .72rem; font-weight: 800; letter-spacing: .045em;
+}
+.environment-banner--production { background: #eaf5ee; color: #17643a; border-color: #b9dfc6; }
+.environment-dot { width: .55rem; height: .55rem; flex: 0 0 .55rem; border-radius: 50%; background: #d99b16; }
+.environment-banner--production .environment-dot { background: #1b8a4b; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(0, 82, 155, .35); outline-offset: 2px;
+}
+@media (max-width: 640px) {
+  .environment-banner { font-size: .65rem; line-height: 1.45; padding: .65rem .8rem; }
+}
+
+
+/* Identidade demonstrativa Casas — sem arquivos de fonte ou ícones externos. */
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.ui-icon, span[class*="fa-"] { display: inline-flex; align-items: center; justify-content: center; min-width: 1em; font-family: system-ui, sans-serif; font-size: .78em; line-height: 1; }
+.environment-banner { border-color: #d9a441; }
